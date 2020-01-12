@@ -1,11 +1,9 @@
 title: EXTRA 2019-2
-author: Mr. Author
-email: mymail@do.ma.in
-description: > # this means to ignore newlines until "show_excerpts:"
-  (V015 20200112) Operating Systems EXTRA 2019-2.
-  Operating Systems EXTRA 2019 2
+description: (V016 20200112) Operating Systems EXTRA 2019-2.
 
 show_excerpts: false # set to true to show excerpts on the homepage
+author: Cicak Bin Kadal
+email: mymail@do.ma.in
 
 exclude:
   - SandBox/
