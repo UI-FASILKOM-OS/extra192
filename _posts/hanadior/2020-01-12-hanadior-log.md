@@ -2,6 +2,7 @@
 layout: post
 title: "Tahap Awal Pembuatan Access Point"
 categories: log hanadior
+date: 2020-01-12
 author: "Hana Dior"
 ---
 
