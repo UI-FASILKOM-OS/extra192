@@ -1,0 +1,9 @@
+<div id="header">
+<nav>
+   {% for item in site.data.navigation %}
+   <li class="fork"><a href="{{ item.link }}" {% if page.url == item.link %}style="color: red;"{% endif %}>
+       {{ item.name }} </a></li>
+   {% endfor %}
+   <li class="fork"><a href="{{ site.github.repository_url }}">GitHub</a></li>
+</nav>
+</div>
