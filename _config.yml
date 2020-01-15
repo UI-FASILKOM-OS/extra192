@@ -1,5 +1,7 @@
 title: EXTRA 2019-2
-description: (V018 20200114) Operating Systems EXTRA 2019-2.
+description: |
+    (V020 20200115)
+    Operating Systems EXTRA 2019-2.
 
 show_excerpts: false # set to true to show excerpts on the homepage
 author: Cicak Bin Kadal
@@ -13,15 +15,22 @@ plugins:
  - jekyll-seo-tag
 
 defaults:
-  -
-    scope:
+  - scope:
       path: ""
       type: "posts"
     values:
       title: "A Post With No Title"
       layout: "post"
       author: "Cicak Bin Kadal"
-      categories: "etc cbk"
+  - scope:
+      path: ""
+      type: "authors"
+    values:
+      layout: "author"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
 
 # Minima date format
 # refer to https://shopify.github.io/liquid/filters/date/ if you want to customize this
