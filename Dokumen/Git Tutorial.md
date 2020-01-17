@@ -1,6 +1,6 @@
-BELAJAR GIT
+# Belajar GIT
 
-How to Learn Git Easily
+**How to Learn Git Easily**
 
 1. Pahami kodenya secara menyeluruh, jangan setengah-setengah.
 
