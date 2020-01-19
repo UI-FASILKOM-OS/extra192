@@ -1,6 +1,11 @@
 #!/bin/bash
 
+sudo systemctl enable ssh;
+
 sudo ./upgrade
+
+sudo systemctl start ssh;
+
 sudo apt install hostapd -y;
 sudo apt install dnsmasq -y;
 
