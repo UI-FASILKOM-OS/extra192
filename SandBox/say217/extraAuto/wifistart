@@ -1,0 +1,32 @@
+#!/bin/bash
+
+echo "Stopping network services (if running)..."
+systemctl stop hostapd.service
+systemctl stop dnsmasq.service
+systemctl stop dhcpcd.service
+
+echo "removing uap0 interface..."
+iw dev uap0 del
+
+echo "Adding uap0 interface..."
+sudo iw dev wlan0 interface add uap0 type __ap
+
+echo "IPV4 forwarding: setting..."
+sysctl net.ipv4.ip_forward=1
+echo "Editing IP tables..."
+iptables -t nat -A POSTROUTING -s 192.168.4.0/24 ! -d 192.168.4.0/24 -j MASQUERADE
+
+ifconfig uap0 up
+
+echo "Starting hostapd.service..."
+systemctl unmask hostapd
+systemctl start hostapd
+sleep 10
+
+echo "Starting dhcpcd.service..."
+systemctl start dhcpcd
+sleep 5
+
+echo "Starting dnsmasq.service..."
+systemctl start dnsmasq
+echo "wifistart DONE"

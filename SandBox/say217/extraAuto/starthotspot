@@ -1,0 +1,24 @@
+#!/bin/bash
+
+sudo ./upgrade
+sudo apt install hostapd -y;
+sudo apt install dnsmasq -y;
+
+sudo yes | cp -rf ./dhcpcd.conf /etc/dhcpcd.conf;
+
+sudo mv /etc/dnsmasq.conf /etc/dnsmasq.conf.orig;
+
+sudo yes | cp -rf ./dnsmasq.conf /etc/dnsmasq.conf;
+
+sudo yes | cp -rf ./hostapd.conf /etc/hostapd/hostapd.conf;
+
+sudo yes | cp -rf ./hostapd /etc/default/hostapd
+
+sudo systemctl stop hostapd;
+sudo systemctl stop dnsmasq;
+sudo systemctl stop dhcpcd;
+sudo systemctl disable hostapd;
+sudo systemctl disable dnsmasq;
+sudo systemctl disable dhcpcd;
+
+sudo ./wifistart;
