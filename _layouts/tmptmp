@@ -1,0 +1,15 @@
+<head>
+  <meta charset="utf-8">
+  <title>{{ site.title }}</title>
+  <meta name="description" content="Extra 2019-2 Operating Systems">
+  <meta name="author" content="Extra 2019-2 Team">
+</head>
+
+<body>
+<b>START WRAPPER</b> <br>
+{% include myheader.html color="blue" %}
+{{ content }}
+<br> <b>END WRAPPER</b>
+</body>
+</html>
+
