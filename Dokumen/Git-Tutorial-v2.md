@@ -36,9 +36,11 @@ $ git commit -m "Komentar"
 5. Git Push
 
 Bertujuan untuk mengirim file ke Git. Untuk dokumentasi Git Push bisa dilihat [disini](https://git-scm.com/docs/git-push).
+
 6. Git Pull
 
 Bertujuan untuk melakukan pengambilan data pada saat perintah dilakukan ke folder lokal. Jika ada *update* terbaru yang dilakukan, tidak bisa melakukan git push sebelum melakukan git pull. Untuk dokumentasi git pull dapat dilihat [disini](https://git-scm.com/docs/git-pull).
+
 7. Membuat Version
 
 Dalam Git, sangat penting dalam memberi version, dengan tujuan agar pengguna dapat melihat apa saja perubahan yang dilakukan pada suatu proyek. Untuk mengetahui cara membuatnya, dapat dilihat [disini](https://help.github.com/en/github/administering-a-repository/creating-releases).
