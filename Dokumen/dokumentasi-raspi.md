@@ -248,10 +248,17 @@ Lalu, jalankan kembali *swap*
 ---
 
 ## Referensi
-https://wpitchoune.net/tricks/raspberry_pi3_increase_swap_size.html
-https://lb.raspberrypi.org/forums/viewtopic.php?t=211542
+Buy a Raspberry Pi 3 Model B – Raspberry Pi. (n.d.). Diambil dari https://www.raspberrypi.org/products/raspberry-pi-3-model-b/
 
+Setting up a Raspberry Pi as a Wireless Access Point. (n.d.). Diambil dari https://www.raspberrypi.org/documentation/configuration/wireless/access-point.md
 
+Installing operating system images. (n.d.). Diambil dari https://www.raspberrypi.org/documentation/installation/installing-images/README.md
+
+Linux users. (n.d.). Diambil dari https://www.raspberrypi.org/documentation/linux/usage/users.md
+
+(n.d.). Diambil dari https://wpitchoune.net/tricks/raspberry_pi3_increase_swap_size.html
+
+(n.d.). Diambil dari https://lb.raspberrypi.org/forums/viewtopic.php?t=211542
 
 
 
