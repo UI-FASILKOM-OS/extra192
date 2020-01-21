@@ -1,11 +1,8 @@
 <!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>{{ site.title }}</title>
-  <meta name="description" content="Head Meta Description">
-  <meta name="author" content="Head Meta Author">
-</head>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  {%- include head.html -%}
+
 <body>
 <b>START WRAPPER</b> <br>
 {% include myheader.html color="blue" %}
