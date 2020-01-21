@@ -58,7 +58,10 @@ Anda bisa menambahkan users pada instalasi Raspbian dengan menggunakan perintah 
 * Setelah itu, Anda diminta untuk memasukkan password sebanyak 2 kali, sebagai upaya untuk mengonfirmasi <em>password</em> Anda.
 
 #### Memberikan sudo privileges kepada user
-TO DO LIST
+Untuk memberikan sudo privileges bagi setiap user, Anda perlu mengakses /etc/sudoers.tmp, lalu tambahkan potongan kode berikut di bawah root
+
+	%sudo ALL=(ALL:ALL) ALL
+
 
 #### Menghapus User
 Anda bisa menghapus users pada sistem Anda dengan menjalankan perintah **userdel**. Gunakan <em>-r flag</em> untuk menghapus folder home mereka.
@@ -121,40 +124,40 @@ Membuat sebuah /etc/dnsmasq.conf dan menambahkan:
 Membuat sebuah file /etc/hostapd/hostapd.conf dan menambahkan:
 Anda boleh untuk menghapus baris komentar (yang diawali oleh tanda #)
 
-    #Set the channel (frequency) of the host access point
+    #Melakukan set terhadap channel host access point
     channel=1
     
-    #Set the SSID broadcast by your access point (replace with your own, of course)
+    #Melakukan set SSID Host
     ssid=yourSSIDhere
     
-    #This sets the passphrase for your access point (again, use your own)'
+    #Melakukan set password
     wpa_passphrase=passwordBetween8and64charactersLong
     
-    #This is the name of the WiFi interface we configured above
+    #Nama dari wifi interface yang telah dikonfigurasi sebelumnya
     interface=uap0
     
-    #Use the 2.4GHz band (I think you can use in ag mode to get the 5GHz band as well, but I have not tested this yet)
+    #Gunakan 2.4GHz band
     hw_mode=g
     
-    #Accept all MAC addresses
+    #Menerima semua MAC addresses
     macaddr_acl=0
     
-    #Use WPA authentication
+    #Gunakan WPA authentication
     auth_algs=1
     
-    #Require clients to know the network name
+    #Berguna untuk menjamin klien untuk mengetahui nama network
     ignore_broadcast_ssid=0
     
-    #Use WPA2
+    #Gunakan WPA2
     wpa=2
     
-    #Use a pre-shared key
+    #Gunakan pre-shared key
     wpa_key_mgmt=WPA-PSK
     wpa_pairwise=TKIP
     rsn_pairwise=CCMP
     driver=nl80211
     
-    #I commented out the lines below in my implementation, but I kept them here for reference.
+    #Tambahan referensi
     
     #Enable WMM
     #wmm_enabled=1
@@ -174,31 +177,31 @@ Tambahkan sebuah file baru /usr/local/bin/wifistart (Anda boleh memilih nama apa
     systemctl stop dnsmasq.service
     systemctl stop dhcpcd.service
 
-    #Make sure no uap0 interface exists (this generates an error; we could probably use an if statement to check if it exists first)
+    #Pastikan tidak ada uap0 yang dijalankan (hal ini dapat menyebabkan error)
     echo "Removing uap0 interface..."
     iw dev uap0 del
 
-    #Add uap0 interface (this is dependent on the wireless interface being called wlan0, which it may not be in Stretch)
+    #Tambahkan uap0 interface (bergantung pada wireless interface bernama wlan0, yang kemungkinan tidak terdapat pada Stretch)
     echo "Adding uap0 interface..."
     iw dev wlan0 interface add uap0 type __ap
 
-    #Modify iptables (these can probably be saved using iptables-persistent if desired)
+    #Modifikasi iptables
     echo "IPV4 forwarding: setting..."
     sysctl net.ipv4.ip_forward=1
     echo "Editing IP tables..."
     iptables -t nat -A POSTROUTING -s 192.168.70.0/24 ! -d 192.168.70.0/24 -j MASQUERADE
 
-    #Bring up uap0 interface. Commented out line may be a possible alternative to using dhcpcd.conf to set up the IP address.
+    #Jalankan kembali uap0 interface. Baris yang dikomentari dapat menjadi alternatif untuk menggunakan dhcpcd.conf to set up the IP address.
     #ifconfig uap0 192.168.70.1 netmask 255.255.255.0 broadcast 192.168.70.255
     ifconfig uap0 up
 
-    #Start hostapd. 10-second sleep avoids some race condition, apparently. It may not need to be that long. (?) 
+    #Jalankan hostapd. 10-second sleep berguna untuk mencegah race condition. Dapat diatur sesuai preferensi 
     echo "Starting hostapd service..."
     systemctl unmask hostapd.service
     systemctl start hostapd.service
     sleep 10
 
-    #Start dhcpcd. Again, a 5-second sleep
+    #Jalankan dhcpcd
     echo "Starting dhcpcd service..."
     systemctl start dhcpcd.service
     sleep 5
