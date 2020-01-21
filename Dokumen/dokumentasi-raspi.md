@@ -259,10 +259,10 @@ Installing operating system images. (n.d.). Diambil dari https://www.raspberrypi
 
 Linux users. (n.d.). Diambil dari https://www.raspberrypi.org/documentation/linux/usage/users.md
 
-(n.d.). Diambil dari https://wpitchoune.net/tricks/raspberry_pi3_increase_swap_size.html
+Raspberry Pi - Increase Swap Size. (n.d). Retrieved from https://wpitchoune.net/tricks/raspberry_pi3_increase_swap_size.html
 
-(n.d.). Diambil dari https://lb.raspberrypi.org/forums/viewtopic.php?t=211542
 
+Pugbot. (2019, February 15). *Raspberry Pi 3 B+ as Access Point and Wifi Client*. Retrieved from https://lb.raspberrypi.org/forums/viewtopic.php?t=211542.
 
 
 
