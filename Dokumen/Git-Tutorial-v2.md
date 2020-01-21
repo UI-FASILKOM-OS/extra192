@@ -12,7 +12,7 @@ Langkah-langkah yang perlu dilakukan ialah:
   2. Jika telah terinstal, langkah berikutnya adalah menuliskan *command* dibawah ini pada Command Prompt(atau Git Bash jika Anda memilih untuk tidak menggunakan Git pada Command Prompt). Hal ini bertujuan agar sistem mengetahui bahwa akun Anda-lah yang melakukan perubahan pada Git.
   ```
   $ git config --global user.name "nama_user"
-  $ git config --global user.email "alamt_email"
+  $ git config --global user.email "alamat_email"
   ```
   
 
