@@ -1,9 +1,27 @@
 # Git Tutorial
+
+## How to Set Up Git (Windows Only, untuk OS lainnya, bisa dilihat di https://www.atlassian.com/git/tutorials/install-git)
+
+Langkah-langkah yang perlu dilakukan ialah:
+
+  1.Pastikan Git telah terinstal pada komputer Anda. Anda dapat melihat apakah Git telah terinstal atau belum dengan mengetik *command* git --version pada Command Prompt.
+  ```
+  $ git --version
+  ```
+  
+  2. Jika telah terinstal, langkah berikutnya adalah menuliskan *command* dibawah ini pada Command Prompt(atau Git Bash jika Anda memilih untuk tidak menggunakan Git pada Command Prompt). Hal ini bertujuan agar sistem mengetahui bahwa akun Anda-lah yang melakukan perubahan pada Git.
+  ```
+  $ git config --global user.name "nama_user"
+  $ git config --global user.email "alamt_email"
+  ```
+  
+
 ## Basic Function 
 
  1. Git Init
  
 Digunakan untuk membuat *repository* baru yang kosong. Untuk memahami mengenai bagaimana penggunaan Git Init, bisa dilihat [disini](https://git-scm.com/docs/git-init).
+
 Contoh pemanfaatan dalam pembuatan *repository* baru dalam suatu direktori:
 ```
 $ cd /path/to/my/codebase
@@ -13,6 +31,7 @@ $ git init
  2. Git Clone
  
 Digunakan untuk melakukan kloning terhadap *repository* yang telah sebelumnya dibuat di Git pada komputer lokal, dengan tujuan agar kita bisa melakukan perubahan dalam git tersebut. Untuk dokumentasi Git Clone dapat dilihat [disini](https://git-scm.com/docs/git-clone).
+
 Contoh pemanfaatan Git Clone dalam melakukan duplikasi:
 ```
 $ git clone 'masukkan link dari git tersebut'
@@ -21,6 +40,7 @@ $ git clone 'masukkan link dari git tersebut'
  3. Git Add
  
 Digunakan untuk memasukkan file baru ke dalam repository, atau memasukkan file lama yang telah diberi perubahan. Dokumentasi mengenai Git Add dapat dilihat [disini](https://git-scm.com/docs/git-add).
+
 Contoh pemanfaatan dari Git Add:
 ```
 $ git add 'nama file'
@@ -29,6 +49,7 @@ $ git add 'nama file'
  4. Git Commit
  
 Bertujuan untuk memberi komentar pada perubahan yang dilakukan kepada file. Jika hal ini tidak dilakukan, file yang di-add sebelumnya tidak bisa dikirim ke git. Dokumentasi mengenai Git Commit dapat dilihat [disini](https://git-scm.com/docs/git-commit).
+
 Contoh penggunaan Git Commit setelah melakukan Git Add:
 ```
 $ git commit -m "Komentar"
