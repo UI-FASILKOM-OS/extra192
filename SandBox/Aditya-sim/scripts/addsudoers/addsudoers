@@ -1,0 +1,10 @@
+#!/bin/bash
+#Take note that the users you're about to add as sudoers must exist
+
+echo "Who would you like to add as sudoers?";
+
+read varname;
+
+echo -e "$varname\tALL=(ALL:ALL) ALL" > /etc/sudoers.d/$varname;
+
+echo "User $varname has been added as sudoers!";
