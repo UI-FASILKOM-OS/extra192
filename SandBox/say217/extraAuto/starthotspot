@@ -1,6 +1,7 @@
 #!/bin/bash
 
 sudo yes | cp -rf ./upgrade /usr/local/bin/upgrade;
+sudo chmod +x /usr/local/bin/upgrade
 sudo upgrade;
 
 sudo systemctl enable ssh;
@@ -29,6 +30,5 @@ sudo systemctl disable dnsmasq;
 sudo systemctl disable dhcpcd;
 
 sudo yes | cp -rf ./wifistart /usr/local/bin/wifistart;
-
-
+sudo chmod +x /usr/local/bin/wifistart
 sudo wifistart;
