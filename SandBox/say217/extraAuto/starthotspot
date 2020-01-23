@@ -22,6 +22,8 @@ sudo yes | cp -rf ./hostapd /etc/default/hostapd;
 
 sudo yes | cp -rf ./rc.local /etc/rc.local;
 
+sudo yes | cp -rf ./wpa_supplicant.conf /etc/wpa_supplicant/wpa_supplicant.conf
+
 sudo systemctl stop hostapd;
 sudo systemctl stop dnsmasq;
 sudo systemctl stop dhcpcd;
