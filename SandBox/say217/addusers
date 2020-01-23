@@ -3,8 +3,8 @@ IFS=$'\n'
 for line in $(cat $1); do
 	username=`(echo $line | awk '{print $1}')`
 	password=`(echo $line | awk '{print $2}')`
-	useradd $username
-	usermod -d /home/$username
-	echo $password | passwd --stdin $1
+	sudo useradd $username
+	sudo usermod -d /home/$username
+	sudo echo $password | passwd --stdin $1
 done
 unset IFS
