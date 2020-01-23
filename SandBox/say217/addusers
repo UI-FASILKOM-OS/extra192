@@ -3,8 +3,7 @@ IFS=$'\n'
 for line in $(cat $1); do
 	username=`(echo $line | awk '{print $1}')`
 	password=`(echo $line | awk '{print $2}')`
-	sudo useradd $username
-	sudo usermod -d /home/$username $username
+	adduser --disabled-password --gecos "" $username
 	echo $username:$password | chpasswd
 done
 unset IFS
