@@ -10,6 +10,7 @@ Selvy Fitriani - 1706039446
 
 ---
 
+
 ### Tujuan 
 Modul ini dibuat untuk membantu pembaca untuk melakukan pengaturan Raspberry Pi 3 sebagai <em>access point</em> dan wi-fi. Isi dari modul ini terbagi menjadi cara melakukan <em>flash</em> OS Image ke SD Cards melalui Raspberry Pi, melakukan instalasi Raspbian dan Etcher, menambah dan menghapus <em>user</em> pada Raspberry Pi, dan pengaturan Raspberry Pi menjadi <em>access point</em> dan wifi.
 <em>Keywords</em>: Raspberry Pi, raspi, <em>access point</em>
@@ -259,10 +260,16 @@ Installing operating system images. (n.d.). Diambil dari https://www.raspberrypi
 
 Linux users. (n.d.). Diambil dari https://www.raspberrypi.org/documentation/linux/usage/users.md
 
-Raspberry Pi - Increase Swap Size. (n.d). Retrieved from https://wpitchoune.net/tricks/raspberry_pi3_increase_swap_size.html
+(n.d.). Diambil dari https://wpitchoune.net/tricks/raspberry_pi3_increase_swap_size.html
 
-
-Pugbot. (2019, February 15). *Raspberry Pi 3 B+ as Access Point and Wifi Client*. Retrieved from https://lb.raspberrypi.org/forums/viewtopic.php?t=211542.
+(n.d.). Diambil dari https://lb.raspberrypi.org/forums/viewtopic.php?t=211542
 
 ## Source
-<em> source </em> dokumentasi ini bisa diakses pada [link](https://hackmd.io/@tehtarikjells/B1J28jfbU/edit) ini
+Source dokumentasi ini bisa diakses pada [link](https://hackmd.io/@tehtarikjells/B1J28jfbU/edit) ini
+
+
+
+
+
+
+
