@@ -1,6 +1,7 @@
 #!/bin/bash
 
 sudo yes | cp -rf ./upgrade /usr/local/bin/upgrade;
+sudo chmod +x /usr/local/bin/upgrade
 sudo upgrade;
 
 sudo systemctl enable ssh;
@@ -21,6 +22,8 @@ sudo yes | cp -rf ./hostapd /etc/default/hostapd;
 
 sudo yes | cp -rf ./rc.local /etc/rc.local;
 
+sudo yes | cp -rf ./wpa_supplicant.conf /etc/wpa_supplicant/wpa_supplicant.conf
+
 sudo systemctl stop hostapd;
 sudo systemctl stop dnsmasq;
 sudo systemctl stop dhcpcd;
@@ -29,6 +32,5 @@ sudo systemctl disable dnsmasq;
 sudo systemctl disable dhcpcd;
 
 sudo yes | cp -rf ./wifistart /usr/local/bin/wifistart;
-
-
-sudo wifistart;
+sudo chmod +x /usr/local/bin/wifistart
+sudo reboot;

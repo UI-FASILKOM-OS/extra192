@@ -1,7 +1,0 @@
-#!/bin/bash
-for i in $( cat users.txt); do
-	useradd $i[0]
-	echo "user $i added successfully!"
-	echo $i[1] | chpasswd
-	echo "Password for user $i changed successfully"
-done

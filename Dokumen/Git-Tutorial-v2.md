@@ -66,6 +66,34 @@ Bertujuan untuk melakukan pengambilan data pada saat perintah dilakukan ke folde
 
 Dalam Git, sangat penting dalam memberi version, dengan tujuan agar pengguna dapat melihat apa saja perubahan yang dilakukan pada suatu proyek. Untuk mengetahui cara membuatnya, dapat dilihat [disini](https://help.github.com/en/github/administering-a-repository/creating-releases).
 
+8. Git Branch
+
+Bertujuan untuk membuat *branch* dalam Git, dengan tujuan untuk mencegah terjadinya konflik ketika melakukan perubahan pada suatu repositori. Untuk dokumentasi mengenai Git Branch dapat dilihat [disini](https://git-scm.com/docs/git-branch).
+
+9. Delete Branch
+
+Bertujuan untuk menghapus *branch* yang telah dibuat sebelumnya, baik itu dihapus secara lokal, atau dari remote. Untuk metode penghapusannya bisa dilihat [disini](https://www.freecodecamp.org/news/how-to-delete-a-git-branch-both-locally-and-remotely/).
+
+10. Git Merge
+
+Bertujuan untuk menggabungkan *branch* yang satu dengan *branch* yang lain, biasanya yang dihubungkan adalah antara *branch* yang kita kerjakan dengan *mater branch*. Untuk dokumentasi mengenai GIt Merge, bisa dilihat [disini](https://git-scm.com/docs/git-merge).
+
+11. Git Log
+
+Fungsi dari perintah ini adalah untuk melihat catatan log perubahan pada repositori yang kita kerjakan. Untuk penjelasan mengenai Git Log bisa dilihat [disini](https://git-scm.com/docs/git-log).
+
+12. Git Revert
+
+Fungsi dari perintah ini adalah untuk mengembalikan file ke kondisi sebelumnya dengan tidak menghapus sejarah commit itu sendiri. Untuk penjelasan mengenai Git Revert bisa dilihat [disini](https://git-scm.com/docs/git-revert).
+
+13. Git Reset
+
+Fungsi dari Git Reset adalah mengembalikan file ke kondisi sebelumnya, kemudian menghapus sejarah commit berikutnya. Namun penggunaan Git Reset sedikit berbahaya, karena jika dilakukan pada repositori yang dibagikan ke publik, maka dapat merusak repositori. Untuk dokumentasi dari Git Reset bisa dilihat [disini](https://git-scm.com/docs/git-reset).
+
+14. Git Checkout
+
+Fungsi dari perintah ini adalah untuk mengembalikan file ke kondisi sebelumnya, hanya saja sifatnya sementara. Untuk dokumentasi mengenai Git Checkout dapat dilihat [disini](https://git-scm.com/docs/git-checkout).
+
 ## Tips and Tricks
 1. Pahami kodenya secara menyeluruh, jangan setengah-setengah.
 
