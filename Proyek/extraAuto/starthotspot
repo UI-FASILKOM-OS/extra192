@@ -33,4 +33,4 @@ sudo systemctl disable dhcpcd;
 
 sudo yes | cp -rf ./wifistart /usr/local/bin/wifistart;
 sudo chmod +x /usr/local/bin/wifistart
-sudo wifistart;
+sudo reboot;
