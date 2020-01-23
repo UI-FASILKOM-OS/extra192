@@ -265,4 +265,4 @@ Raspberry Pi - Increase Swap Size. (n.d). Retrieved from https://wpitchoune.net/
 Pugbot. (2019, February 15). *Raspberry Pi 3 B+ as Access Point and Wifi Client*. Retrieved from https://lb.raspberrypi.org/forums/viewtopic.php?t=211542.
 
 ## Source
-<em> source </em> dokumentasi ini bisa diakses pada [link](https://docs.google.com/document/d/1UeK25gXLMIjMctxhWXTPveMHrNUPkmNEBpvClO0fH1Y/edit?usp=sharing) ini
+<em> source </em> dokumentasi ini bisa diakses pada [link](https://hackmd.io/@tehtarikjells/B1J28jfbU/edit) ini
