@@ -248,6 +248,16 @@ Lalu, jalankan kembali *swap*
     
     sudo dphys-swapfile swapon
 
+### Membuat raspberry pi menjadi hotspot dengan script yang sudah disediakan
+
+Pertama pastikan raspbian sudah berhasil terinstall dan sudah selesai di-setup.  
+Setelah itu buka terminal pada raspberry pi dan jalankan rangkaian command berikut:
+
+    git clone https://github.com/UI-FASILKOM-OS/extra192
+    cd extra192/Proyek/extraAuto
+    sudo ./starthotspot
+
+Setelah command tersebut selasai dijalankan, raspberry pi sudah berhasil menjadi hotspot dengan ssid "extraos" dan password "extraos192".
 
 ---
 
