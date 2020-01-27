@@ -2,14 +2,13 @@
 ## Access Point and Wi-fi
 
 ### Extra 192:
-Aditya Pratama - 1706039490
-Hana Dior Novelyne Tobing - 1706025182
-Mochamad Naufal Dzulfikar - 1706043903
-Sayid Abyan Rizal Shiddiq - 1706022445
-Selvy Fitriani - 1706039446
+* Aditya Pratama - 1706039490
+* Hana Dior Novelyne Tobing - 1706025182
+* Mochamad Naufal Dzulfikar - 1706043903
+* Sayid Abyan Rizal Shiddiq - 1706022445
+* Selvy Fitriani - 1706039446
 
 ---
-
 
 ### Tujuan 
 Modul ini dibuat untuk membantu pembaca untuk melakukan pengaturan Raspberry Pi 3 sebagai <em>access point</em> dan wi-fi. Isi dari modul ini terbagi menjadi cara melakukan <em>flash</em> OS Image ke SD Cards melalui Raspberry Pi, melakukan instalasi Raspbian dan Etcher, menambah dan menghapus <em>user</em> pada Raspberry Pi, dan pengaturan Raspberry Pi menjadi <em>access point</em> dan wifi.
@@ -17,13 +16,21 @@ Modul ini dibuat untuk membantu pembaca untuk melakukan pengaturan Raspberry Pi 
 
 ### Spesifikasi 
 Hal-hal yang harus Anda siapkan:
-* Micro SD card
-* Micro USB power supply (2.1 A)
+* Micro SD card (kami menggunakan ukuran 8 GB)
+![micro sd](https://raw.githubusercontent.com/UI-FASILKOM-OS/extra192/master/Dokumen/Images/micro_sd_card.jpeg)
+* Micro USB power supply (2.5 A)
+![micro usb power supply](https://raw.githubusercontent.com/UI-FASILKOM-OS/extra192/master/Dokumen/Images/micro-usb-power-supply.jpg)
 * Raspberry pi (kami menggunakan raspberry pi 3 model B)
+![raspberry pi 3 b](https://raw.githubusercontent.com/UI-FASILKOM-OS/extra192/master/Dokumen/Images/Raspberry_Pi_3_buyapi-1__20242.1539127615.jpg)
 
-Dan untuk menggunakan hal diatas sebagai desktop  komputer, Anda membutuhkan:
-* TV or monitor dan HDMI cable
-* Keyboard dan mouse
+Dan untuk menggunakan spesifikasi di atas sebagai *desktop*  komputer, Anda membutuhkan:
+* TV or monitor dan HDMI cable  
+![monitor](https://raw.githubusercontent.com/UI-FASILKOM-OS/extra192/master/Dokumen/Images/monitor.jpg)  
+
+![hdmi](https://raw.githubusercontent.com/UI-FASILKOM-OS/extra192/master/Dokumen/Images/hdmi.jpg)
+
+* Keyboard dan mouse  
+![keyboard and mouse](https://raw.githubusercontent.com/UI-FASILKOM-OS/extra192/master/Dokumen/Images/81Z882NR-ZL._AC_SX466_.jpg)
 
 ## Metode
 
@@ -34,24 +41,88 @@ Untuk memulai, perangkat kita butuh menjalankan sebuah Sistem Operasi  Jadi, kam
 #### Instalasi raspbian
 Untuk melakukan instalasi Raspbian, lakukan tahap-tahap berikut:
 * Buka link https://www.raspberrypi.org/downloads/raspbian/ dan pilih versi terakhir Raspbian Buster with desktop.
+![raspberry pi os](https://raw.githubusercontent.com/UI-FASILKOM-OS/extra192/master/Dokumen/Images/download-raspberry.JPG)
 * Jika anda telah menginstall <em>torrent client</em>, karena waktu unduhnya lebih cepat dibandingkan langsung mengunduh versi zip-nya. Setelah file .torrent berhasil diunduh, silahkan ubah menjadi file .zip dengan <em>torrent client</em> yang Anda miliki. Pilihan lainnya adalah langsung mengunduh versi zip nya.
 
-![text](https://github.com/UI-FASILKOM-OS/extra192/blob/master/Dokumen/Images/raspbian.png)
-
 #### Instalasi Etcher
-Selanjutnya, kita **membutuhkan sebuah aplikasi** untuk melakukan flash terhadap image ke sebuah SD Card karena dengan cara inilah, perangkat kita bisa berjalan. Pastikan SD Card Anda sudah dalam bentuk Micro SD.
+Selanjutnya, kita **membutuhkan sebuah aplikasi** untuk melakukan *flash* terhadap *image* ke sebuah SD Card karena dengan cara inilah, perangkat kita bisa berjalan. Pastikan SD Card Anda sudah dalam bentuk Micro SD.
 Aplikasi yang kami gunakan adalah Etcher, silahkan ikuti tahapan berikut:
-* Buka link : https://www.balena.io/etcher/ . Pilih versi terakhir yang sesuai dengan Sistem Operasi Anda. Kemudian install.
-* Sambungkan SD Card reader dengan SD Card didalamnya.
-* Buka balenaEtcher yang sudah ter-install, klik “Select Image” kemudian pilih  Raspberry Pi .img atau .zip yang ingin ditulis pada SD Card.
-* Kemudian, klik “Select Drive” untuk memilih SD Card tempat image akan ditulis.
+* Buka link : https://www.balena.io/etcher/ . Pilih versi terakhir yang sesuai dengan Sistem Operasi Anda. Kemudian *install*.
+* Sambungkan SD Card *reader* dengan SD Card didalamnya.
+* Buka balenaEtcher yang sudah ter-*install*, klik “Select Image” kemudian pilih  Raspberry Pi .img atau .zip yang ingin ditulis pada SD Card.
+* Kemudian, klik “Select Drive” untuk memilih SD Card tempat *image* akan ditulis.
 * Periksa kembali file yang dipilih kemudian klik ‘Flash’ untuk memulai menulis data ke SD card.
 
 Sekarang, Anda sudah bisa memasukkan SD Card Anda ke Raspberry pi dan bisa mulai menggunakan Raspbian OS.
 
-### Menambahkan dan Menghapus User 
+---
+Pada tahapan selanjutnya, Anda dibebaskan untuk memilih melakukannya dengan mengikuti langkah-langkah yang disusun oleh Tim Extra 192 atau melakukan *cloning scripts* yang tersedia pada Github Tim Extra 192.
+
+## Melakukan *cloning*  dari Github Extra 192
+Pertama, lakukan git clone pada link ini https://github.com/UI-FASILKOM-OS/extra192
+
+    git clone https://github.com/UI-FASILKOM-OS/extra192
+    
+### Menambah *user* dalam jumlah banyak
+Setelah proses *cloning* selesai anda pindah ke direktori /extra192/Proyek/addUsers dengan
+
+    cd extra192/Proyek/addUsers/
+    
+Pada direktori tersebut, tambahkan satu *file* untuk menampung daftar *username* yang akan Anda gunakan.
+
+    sudo nano namafile
+
+di dalamnya tambahkan *usernames* yang akan anda pakai dipisahkan dengan *new line*.
+    
+Lanjutkan dengan melakukan perintah ls, maka akan terlihat salah satu *file* yang *executable* yaitu appendusers. Yang Anda perlu lakukan sekarang hanyalah menajalankannya dengan
+
+    sudo ./appendusers namafile
+    
+Tunggu proses hingga selesai lalu Anda dapat menambahkan *users* dalam jumlah banyak.
+
+### Melakukan *set-up* Raspberry Pi sebagai *access point hotspot*
+Setelah proses *cloning* selesai anda pindah ke direktori /extra192/Proyek/extraAuto dengan
+
+    cd extra192/Proyek/extraAuto/
+    
+Pada direktori tersebut, lakukan perintah ls, maka akan terlihat salah satu *file* yang *executable* yaitu starthotspot. Yang Anda perlu lakukan sekarang hanyalah menajalankannya dengan
+
+    sudo ./starthotspot
+    
+Tunggu proses hingga selesai lalu Anda dapat menggunakan Raspi sebagai *hotspot* dengan ssid "extraos" dan password "extraos192".
+
+### Menambahkan sudo privilege pada user
+Setelah proses *cloning* selesai anda pindah ke direktori /extra192/Proyek/addsudoers
+    
+    cd /extra192/Proyek/addsudoers/
+    
+Jalankan file addsudoers dengan cara 
+
+    sudo ./addsudoers
+    
+Masukkan nama user yang ingin anda berikan *sudo privileges* 
+
+**Peringatan**: user yang ingin Anda tambahkan sudo privileges-nya harus ada dalam sistem.
+
+### Meng-generate password untuk banyak users
+Setelah proses *cloning* selesai anda pindah ke direktori /extra192/Proyek/generatePassword
+    
+    cd /extra192/Proyek/generatePassword/
+
+Tambahkan username yang ingin anda buatkan password secara random pada file baru dipisahkan dengan new line dengan cara
+
+    nano namafile
+    
+Jalankan file generatepassword dengan cara 
+
+    ./generatepassword namafile
+    
+Setelah file selesai *running*, maka akan muncul file *users.txt* yang berisi "*username* *random passwords*". 
+    
+## Tutorial
+### Menambahkan dan Menghapus User
 #### Menambahkan User
-Anda bisa menambahkan users pada instalasi Raspbian dengan menggunakan perintah **adduser**.
+Anda bisa menambahkan *users* pada instalasi Raspbian dengan menggunakan perintah **adduser**.
 * Masukkan **sudo adduser [username]**, misalnya username yang akan Anda tambahkan adalah rms46.
 
         sudo adduser rms46
@@ -59,46 +130,56 @@ Anda bisa menambahkan users pada instalasi Raspbian dengan menggunakan perintah 
 * Setelah itu, Anda diminta untuk memasukkan password sebanyak 2 kali, sebagai upaya untuk mengonfirmasi <em>password</em> Anda.
 
 #### Memberikan sudo privileges kepada user
-Untuk memberikan sudo privileges bagi setiap user, Anda perlu mengakses /etc/sudoers.tmp, lalu tambahkan potongan kode berikut di bawah root
+Untuk memberikan sudo privileges bagi setiap user, Anda perlu membuat file sesuai dengan nama user yang ingin diberikan privileges pada /etc/sudoers.d/, lalu isi file tersebut dengan  
+     
+    nama_user ALL=(ALL:ALL) ALL
 
-	%sudo ALL=(ALL:ALL) ALL
-
+catatan : nama_user diganti dengan *username* yang ingin ditambahkan
 
 #### Menghapus User
-Anda bisa menghapus users pada sistem Anda dengan menjalankan perintah **userdel**. Gunakan <em>-r flag</em> untuk menghapus folder home mereka.
+Anda bisa menghapus *users* pada sistem Anda dengan menjalankan perintah **userdel**. Gunakan <em>-r flag</em> untuk menghapus folder *home* mereka.
 
     sudo userdel -r rms46
+    
 
 
 #### Menambah User dalam Jumlah Banyak sebagai Script
-Untuk menambahkan users dalam jumlah banyak, Anda dapat mengikuti langkah di bawah ini. Pada tahap ini, Anda dapat membuat sebuah script untuk memanggil fungsi tersebut.
+Untuk menambahkan *users* dalam jumlah banyak, Anda dapat mengikuti langkah di bawah ini. Pada tahap ini, Anda dapat membuat sebuah *script* untuk memanggil fungsi tersebut.
     
     sudo nano namascript
 
 
-Setelah menentukan nama script, maka Anda dapat menambahkan code di bawah ke dalam <em>script</em> tersebut
+Setelah menentukan nama *script*, maka Anda dapat menambahkan *code* di bawah ke dalam <em>script</em> tersebut
 
     #!/bin/bash
-    for i in $( cat users.txt ); do
-    useradd $i
-    echo "user $i added successfully!"
-    echo $i:$i"123" | chpasswd
-    echo "Password for user $i changed successfully"
+    IFS=$'\n'   
+    for line in $(cat $1); do
+        username=`(echo $line | awk '{print $1}')`
+        password=`(echo $line | awk '{print $2}')`
+        adduser --disabled-password --gecos "" $username
+        echo $username:$password | chpasswd
     done
+    unset IFS
 
+Setelah membuat *script* tersebut, Anda perlu memberikan *permission* untuk dieksekusi dengan cara 
+    
+    sudo chmod +x path_to_namascript
+    
 ### Mengatur Raspberry Pi sebagai Access Point dan Wi-fi Client
-#### Meng-update sistem
-Untuk melanjutkan ke tahap ini, kita terlebih dahulu melakukan update sistem. Hal ini bertujuan agar sistem yang kita gunakan mendapatkan fitur terbaru.
+Pada tahap ini, kami menyediakan dua alternatif cara untuk mengatur raspi sebagai *access point* dan *wi-fi client*.
+
+**Meng-update sistem**
+Untuk melanjutkan ke tahap ini, kita terlebih dahulu melakukan *update* sistem. Hal ini bertujuan agar sistem yang kita gunakan mendapatkan fitur terbaru.
 
     sudo apt-get update
     sudo apt-get upgrade
 
-#### Meng-install hostapd dan dnsmasq
-Selanjutnya kita meng-install hostapd (sebuah access point daemon) dan dnsmasq dhcp service.
+**Meng-install hostapd dan dnsmasq**
+Selanjutnya kita meng-*install* hostapd (sebuah access point daemon) dan dnsmasq dhcp service.
 
     sudo apt-get install hostapd dnsmasq
 
-#### Meng-edit configuration files
+**Meng-edit configuration files**
 Pada tahap ini kita akan melakukan perubahan terhadap config files untuk dhcps, hostapd, dan dnsmasq agar dapat saling bekerja dengan baik.
 
 Pertama kita pindah ke /etc/dhcpcd.conf lalu di dalamnya kita tambahkan
@@ -118,11 +199,11 @@ Membuat sebuah /etc/dnsmasq.conf dan menambahkan:
     server=8.8.8.8
     domain-needed
     bogus-priv
-    dhcp-range=192.168.70.50,192.168.70.150,12h
+    dhcp-range=192.168.4.1,192.168.4.50,24h
 
 *Catatan: IP address range yang digunakan dapat sesuai dengan keinginan Anda.*
 
-Membuat sebuah file /etc/hostapd/hostapd.conf dan menambahkan:
+Membuat sebuah *file* /etc/hostapd/hostapd.conf dan menambahkan:
 Anda boleh untuk menghapus baris komentar (yang diawali oleh tanda #)
 
     #Melakukan set terhadap channel host access point
@@ -167,12 +248,12 @@ Anda boleh untuk menghapus baris komentar (yang diawali oleh tanda #)
 
 *Catatan : channel yang ditulis di sini HARUS sesuai dengan channel wifi yang Anda sambungkan dalam client mode (melalui wpa-supplicant). Jika channel untuk Access Point dan  dan STA(stations) Anda tidak cocok, maka salah satu atau keduanya tidak akan berjalan. Hal ini disebabkan karena hanya ada satu antena fisik yang tidak bisa mencakup dua saluran sekaligus.*
 
-Meng-edit file /etc/default/hostapd dan tambahkan script berikut ini setelah #DAEMON_CONF:
+Meng-*edit* file /etc/default/hostapd dan tambahkan *script* berikut ini setelah #DAEMON_CONF:
 
     DAEMON_CONF="/etc/hostapd/hostapd.conf" 
 
-Membuat startup script
-Tambahkan sebuah file baru /usr/local/bin/wifistart (Anda boleh memilih nama apapun yang Anda suka), kemudian tambahkan:
+**Membuat startup script**
+Tambahkan sebuah *file* baru /usr/local/bin/wifistart (Anda boleh memilih nama apapun yang Anda suka), kemudian tambahkan:
 
     systemctl stop hostapd.service
     systemctl stop dnsmasq.service
@@ -211,12 +292,12 @@ Tambahkan sebuah file baru /usr/local/bin/wifistart (Anda boleh memilih nama apa
     systemctl start dnsmasq.service
     echo "wifistart DONE"
 
-Meng-edit local system script
-Tambahkan script dibawah ini ke /etc/rc.local diatas exit 0 line
+**Meng-edit local system script**
+Tambahkan *script* dibawah ini ke /etc/rc.local di atas *exit 0*
 (Perhatikan: ada spasi antara “/bin/bash” dan "/usr/local/bin/wifistart")
 
-Menonaktifkan regular network services
-Menonaktifkan artinya memastikan bahwa tidak ada hal yang dijalankan ketika system startup.
+**Menonaktifkan regular network services**
+Menonaktifkan artinya memastikan bahwa tidak ada hal yang dijalankan ketika *system startup*.
 
     sudo systemctl stop hostapd
     sudo systemctl stop dnsmasq
@@ -225,13 +306,13 @@ Menonaktifkan artinya memastikan bahwa tidak ada hal yang dijalankan ketika syst
     sudo systemctl disable dnsmasq
     sudo systemctl disable dhcpcd
 
-Reboot
-Untuk melakukan reboot, ikuti petunjuk di bawah ini.
+**Reboot**
+Untuk melakukan *reboot*, ikuti petunjuk di bawah ini.
 (Tidak diwajibkan)
 
     sudo reboot
 
-Untuk memberi izin untuk eksekusi sebagai script
+Untuk memberi izin untuk eksekusi sebagai *script*
 
     chmod +x path to nama_file
 
@@ -247,18 +328,7 @@ Modifikasi *swap size*
 Lalu, jalankan kembali *swap*
     
     sudo dphys-swapfile swapon
-
-### Membuat raspberry pi menjadi hotspot dengan script yang sudah disediakan
-
-Pertama pastikan raspbian sudah berhasil terinstall dan sudah selesai di-setup.  
-Setelah itu buka terminal pada raspberry pi dan jalankan rangkaian command berikut:
-
-    git clone https://github.com/UI-FASILKOM-OS/extra192
-    cd extra192/Proyek/extraAuto
-    sudo ./starthotspot
-
-Setelah command tersebut selasai dijalankan, raspberry pi sudah berhasil menjadi hotspot dengan ssid "extraos" dan password "extraos192".
-
+    
 ---
 
 ## Referensi
@@ -270,12 +340,9 @@ Installing operating system images. (n.d.). Diambil dari https://www.raspberrypi
 
 Linux users. (n.d.). Diambil dari https://www.raspberrypi.org/documentation/linux/usage/users.md
 
-(n.d.). Diambil dari https://wpitchoune.net/tricks/raspberry_pi3_increase_swap_size.html
+Raspberry Pi - Increase Swap Size. (n.d). Retrieved from https://wpitchoune.net/tricks/raspberry_pi3_increase_swap_size.html
 
-(n.d.). Diambil dari https://lb.raspberrypi.org/forums/viewtopic.php?t=211542
-
-## Source
-Source dokumentasi ini bisa diakses pada [link](https://hackmd.io/@tehtarikjells/B1J28jfbU/edit) ini
+Pugbot. (2019, February 15). *Raspberry Pi 3 B+ as Access Point and Wifi Client*. Retrieved from https://lb.raspberrypi.org/forums/viewtopic.php?t=211542.
 
 
 
