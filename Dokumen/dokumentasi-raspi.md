@@ -58,6 +58,28 @@ Sekarang, Anda sudah bisa memasukkan SD Card Anda ke Raspberry pi dan bisa mulai
 ---
 Pada tahapan selanjutnya, Anda dibebaskan untuk memilih melakukannya dengan mengikuti langkah-langkah yang disusun oleh Tim Extra 192 atau melakukan *cloning scripts* yang tersedia pada Github Tim Extra 192.
 
+## Set up raspberry pi
+Sebelum anda melakukan apapun pada raspberry pi, anda harus melakukan set up awal pada raspberry pi. Anda perlu set up untuk Localization, termasuk basaha dan keyboard, password untuk akun pi, dan seterusnya.
+
+### Set up localization
+Tekan tombol "Next" pada window pertama yang anda hadapi.
+Kami berasumsi anda tinggal di Indonesia, sehingga silahkan pilih negara Indonesia pada tab "Country". Setelah anda lakukan itu harusnya tab "Language" dan "Timezone" akan otomatis berubah ke "Indonesia" dan "Jakarta". Setelah itu jangan lupa untuk mentik box "Use English Language" dan box "Use US Keyboard". Karena itu yang akan kita pakai pada tutorial ini.
+Tekan tombol "Next".
+
+### Change Password
+Pada window ini anda harus menentukan password untuk akun pi, yaitu akun root anda. Masukan password anda pada tab "Enter new password", lakukan lagi pada tab di bawahnya.
+Jika sudah, tekan tombol "Next".
+
+### Select WiFi Network
+Di sini anda disarankan memilih WiFi yang memiliki koneksi internet sehingga Raspberry Pi dapat meng-update pada window selanjutnya. Pilih WiFi yang anda miliki lalu tekan tombol "Next". Masukan password WiFi tersebut pada tab "Password", jika sudah benar tekan tombol "Next".
+
+### Check For Updates
+Di sini anda boleh memilih untuk melakukan update, namun ini akan memakan waktu yang cukup lama sehingga langsung tekan tombol "Next".
+
+### Reboot
+Tekan tombol "Reboot".
+Raspberry Pi anda telah siap digunakan.
+
 ## Melakukan *cloning*  dari Github Extra 192
 Pertama, lakukan git clone pada link ini https://github.com/UI-FASILKOM-OS/extra192
 
