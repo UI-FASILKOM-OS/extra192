@@ -7,9 +7,7 @@
   implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 '
 
-sudo yes | cp -rf ./upgrade /usr/local/bin/upgrade;
-sudo chmod +x /usr/local/bin/upgrade
-sudo upgrade;
+sudo apt update;
 
 sudo systemctl enable ssh;
 sudo systemctl start ssh;
