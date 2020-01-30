@@ -1,5 +1,6 @@
 # Raspberry Pi Manual
 ## Access Point and Wi-fi
+### WARNING! This method will be obsolete in future package releases.
 
 ### Extra 192:
 * Aditya Pratama - 1706039490
