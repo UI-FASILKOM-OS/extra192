@@ -80,6 +80,9 @@ Di sini anda boleh memilih untuk melakukan update, namun ini akan memakan waktu 
 Tekan tombol "Reboot".
 Raspberry Pi anda telah siap digunakan.
 
+## Login SSO
+Sebelum, melakukan apapun pilih WiFi Hotspot UI pada tombol WiFi. Lalu gunakan browser untuk login ke akun SSO anda dengan mengetik "gw.hotspot.ui.ac.id" pada search bar. Lalu masukan user dan password SSO anda.
+
 ## Melakukan *cloning*  dari Github Extra 192
 Pertama, lakukan git clone pada link ini https://github.com/UI-FASILKOM-OS/extra192
 
