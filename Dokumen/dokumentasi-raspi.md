@@ -137,21 +137,21 @@ Setelah proses *cloning* selesai anda pindah ke direktori /extra192/Proyek/gener
 
 Tambahkan username yang ingin anda buatkan password secara random pada file baru dipisahkan dengan new line dengan cara
 
-    nano namafile
+    nano username 
     
 Jalankan file generatepassword dengan cara 
 
-    ./generatepassword namafile
+    ./generatepassword source target  #dalam contoh diatas diganti dengan username dan target adalah file output yang akan di generate
     
-Setelah file selesai *running*, maka akan muncul file *users.txt* yang berisi "*username* *random passwords*". 
+Setelah file selesai *running*, maka akan muncul file target yang berisi "*username* *random passwords*". 
     
 ## Tutorial
 ### Menambahkan dan Menghapus User
 #### Menambahkan User
 Anda bisa menambahkan *users* pada instalasi Raspbian dengan menggunakan perintah **adduser**.
-* Masukkan **sudo adduser [username]**, misalnya username yang akan Anda tambahkan adalah rms46.
+* Masukkan **sudo adduser [username]**, misalnya username yang akan Anda tambahkan adalah say217.
 
-        sudo adduser rms46
+        sudo adduser say217
 
 * Setelah itu, Anda diminta untuk memasukkan password sebanyak 2 kali, sebagai upaya untuk mengonfirmasi <em>password</em> Anda.
 
@@ -165,15 +165,16 @@ catatan : nama_user diganti dengan *username* yang ingin ditambahkan
 #### Menghapus User
 Anda bisa menghapus *users* pada sistem Anda dengan menjalankan perintah **userdel**. Gunakan <em>-r flag</em> untuk menghapus folder *home* mereka.
 
-    sudo userdel -r rms46
+    sudo userdel -r say217
     
-
+catatan : say217 diganti dengan *username* yang ingin ditambahkan
 
 #### Menambah User dalam Jumlah Banyak sebagai Script
 Untuk menambahkan *users* dalam jumlah banyak, Anda dapat mengikuti langkah di bawah ini. Pada tahap ini, Anda dapat membuat sebuah *script* untuk memanggil fungsi tersebut.
     
-    sudo nano namascript
+    sudo nano appendusers
 
+catatan : appendusers bisa diganti dengan nama lain
 
 Setelah menentukan nama *script*, maka Anda dapat menambahkan *code* di bawah ke dalam <em>script</em> tersebut
 
@@ -189,7 +190,7 @@ Setelah menentukan nama *script*, maka Anda dapat menambahkan *code* di bawah ke
 
 Setelah membuat *script* tersebut, Anda perlu memberikan *permission* untuk dieksekusi dengan cara 
     
-    sudo chmod +x path_to_namascript
+    sudo chmod +x path_to_script #dalam contoh diatas path_to_script diganti dengan appendusers
     
 ### Mengatur Raspberry Pi sebagai Access Point dan Wi-fi Client
 Pada tahap ini, kami menyediakan dua alternatif cara untuk mengatur raspi sebagai *access point* dan *wi-fi client*.
