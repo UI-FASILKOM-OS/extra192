@@ -348,9 +348,15 @@ Pertama, hentikan *swap*
 
     sudo dphys-swapfile swapoff
 
-Modifikasi *swap size*
+Modifikasi ganti suatu line yang berada pada file dphys-swapfile
+
+    nano /etc/dphys-swapfile
+
+Setelah itu cari line 'CONF_SWAPSIZE'
 
     CONF_SWAPSIZE=1024
+
+    catatan : nilai 1024 bisa diganti dengan nilai swap yang diinginkan.
     
 Lalu, jalankan kembali *swap*
     
